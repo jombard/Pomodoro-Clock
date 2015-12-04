@@ -1,62 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pomodoro Clock</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-  <body class="text-center">
+</head>
+
+<body class="text-center">
     <div class="container">
-      <div class="row">
-        <h1>Pomodoro Clock</h1>
-        <p class="lead">Based on the pomodoro technique, this handy timer will help you be more productive</p>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-4">
-          <input type="button" class="btn btn-default btn-block btn-lg js-pomodoro" value="Pomodoro">
+        <div class="row">
+            <h1>Pomodoro Clock</h1>
+            <p class="lead">Based on the pomodoro technique, this handy timer will help you be more productive</p>
         </div>
-        <div class="col-sm-4">
-          <input type="button" class="btn btn-default btn-block btn-lg js-short-break" value="Short Break">
+        <div class="row">
+            <div class="col-sm-4">
+                <input type="button" class="btn btn-default btn-block btn-lg js-pomodoro" value="Pomodoro">
+            </div>
+            <div class="col-sm-4">
+                <input type="button" class="btn btn-default btn-block btn-lg js-short-break" value="Short Break">
+            </div>
+            <div class="col-sm-4">
+                <input type="button" class="btn btn-default btn-block btn-lg js-long-break" value="Long Break">
+            </div>
         </div>
-        <div class="col-sm-4">
-          <input type="button" class="btn btn-default btn-block btn-lg js-long-break" value="Long Break">
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-4">
+                <h1 id="timer_default" class="timer">00:00</h1>
+            </div>
         </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-4 col-sm-offset-4">
-          <h1 id="timer_default" class="timer">00:00</h1>
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-4">
+                <div class="btn-group">
+                    <button id="timer_toggle" class="btn btn-default">
+                        Start/Stop Timer
+                    </button>
+                    <button id="timer_reset" class="btn btn-default">
+                        Reset Timer
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-4 col-sm-offset-4">
-          <div class="btn-group">
-            <button id="timer_toggle" class="btn btn-default">
-              Start/Stop Timer
-            </button>
-            <button id="timer_reset" class="btn btn-default">
-              Reset Timer
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
-
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.the_final_countdown.js"></script>
     <script src="js/clock.js"></script>
-  </body>
+</body>
+
 </html>
