@@ -7,7 +7,7 @@ $(function() {
 	});
 	$(".js-short-break").click(function() {
 		$("#timer_default").createTimer({
-			time_in_seconds: 5,
+			time_in_seconds: 300,
 			autostart: true
 		});
 	});
