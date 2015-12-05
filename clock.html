@@ -20,7 +20,7 @@
     <div class="container">
         <div class="row">
             <h1>Pomodoro Clock</h1>
-            <p class="lead">Based on the pomodoro technique, this handy timer will help you be more productive</p>
+            <p class="lead">Based on the <a href="http://pomodorotechnique.com/">pomodoro technique</a>, this handy timer will help you be more productive</p>
         </div>
         <div class="row">
             <div class="col-sm-4">
@@ -42,10 +42,12 @@
             <div class="col-sm-4 col-sm-offset-4">
                 <div class="btn-group">
                     <button id="timer_toggle" class="btn btn-default">
-                        Start/Stop Timer
+                        <div class="glyphicon glyphicon-pause double-size"></div>
+                        <div class="pause-timer">Pause Timer</div>
                     </button>
                     <button id="timer_reset" class="btn btn-default">
-                        Reset Timer
+                        <div class="glyphicon glyphicon-refresh double-size"></div>
+                        <div class="reset-timer">Reset Timer</div>
                     </button>
                 </div>
             </div>
@@ -53,6 +55,7 @@
     </div>
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/howler.min.js"></script>
     <script src="js/jquery.the_final_countdown.js"></script>
     <script src="js/clock.js"></script>
 </body>
