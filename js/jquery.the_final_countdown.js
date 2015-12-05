@@ -13,7 +13,9 @@
     return $.extend({
       time_in_seconds: 3600,
       time_format: 'MM:ss',
-      tick: function(timer, time_in_seconds, formatted_time) {},
+      tick: function(timer, time_in_seconds, formatted_time) {
+        updateTitle(formatted_time);
+      },
       buzzer: function(timer) {
         countdownAlert();
       },

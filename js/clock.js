@@ -25,6 +25,7 @@ function countdownAlert() {
 	var sound = new Howl({
 		urls: ['sounds/alarmwatch.mp3']
 	}).play();
+	changeTitleStatus();
 }
 
 function timerToggle() {
@@ -36,6 +37,7 @@ function timerToggle() {
 		timer.pauseTimer();
 		timerToggle.find('.glyphicon').removeClass('glyphicon-pause').addClass('glyphicon-play');
 		$('.pause-timer').text('Resume Timer');
+		changeTitleStatus('pause');
 	} else {
 		timer.startTimer();
 		timerToggle.find('.glyphicon').removeClass('glyphicon-play').addClass('glyphicon-pause');
@@ -48,4 +50,16 @@ function resetTimer() {
 	$("#timer_toggle").find('.glyphicon').removeClass('glyphicon-play').addClass('glyphicon-pause');
 	$('.pause-timer').text('Pause Timer');
 	$("#timer_toggle").removeClass('active');
+}
+
+function updateTitle(time) {
+	document.title = time + ' | Pomodoro Clock';
+}
+
+function changeTitleStatus(status) {
+	if(status === 'pause') {
+		document.title = '❚❚ ' + document.title;
+	} else {
+		document.title = 'ALERT! ' + document.title;
+	}
 }
