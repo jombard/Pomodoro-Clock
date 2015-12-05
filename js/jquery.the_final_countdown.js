@@ -14,7 +14,9 @@
       time_in_seconds: 3600,
       time_format: 'MM:ss',
       tick: function(timer, time_in_seconds, formatted_time) {},
-      buzzer: function(timer) {},
+      buzzer: function(timer) {
+        countdownAlert();
+      },
       autostart: true
     }, user_settings);
   }
