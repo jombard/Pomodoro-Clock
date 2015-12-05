@@ -20,34 +20,32 @@
     <div class="container">
         <div class="row">
             <h1>Pomodoro Clock</h1>
-            <p class="lead">Based on the <a href="http://pomodorotechnique.com/">pomodoro technique</a>.</p>
+            <p class="">More on the <a href="http://pomodorotechnique.com/">pomodoro technique</a></p>
         </div>
         <div class="row">
             <div class="col-sm-4">
-                <input type="button" class="btn btn-default btn-block btn-lg js-pomodoro" value="Pomodoro">
+                <input type="button" class="btn btn-danger btn-block btn-lg js-pomodoro" value="Pomodoro">
             </div>
             <div class="col-sm-4">
-                <input type="button" class="btn btn-default btn-block btn-lg js-short-break" value="Short Break">
+                <input type="button" class="btn btn-info btn-block btn-lg js-short-break" value="Short Break">
             </div>
             <div class="col-sm-4">
-                <input type="button" class="btn btn-default btn-block btn-lg js-long-break" value="Long Break">
+                <input type="button" class="btn btn-primary btn-block btn-lg js-long-break" value="Long Break">
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-4 col-sm-offset-4">
+            <div class="col-xs-12 col-sm-4 col-sm-offset-4">
                 <h1 id="timer_default" class="timer">00:00</h1>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-4 col-sm-offset-4">
                 <div class="btn-group">
-                    <button id="timer_toggle" class="btn btn-default">
-                        <div class="glyphicon glyphicon-pause double-size"></div>
-                        <div class="pause-timer">Pause Timer</div>
+                    <button id="timer_toggle" class="btn btn-default btn-lg" title="Pause Timer">
+                        <div class="glyphicon glyphicon-pause"></div>
                     </button>
-                    <button id="timer_reset" class="btn btn-default">
-                        <div class="glyphicon glyphicon-refresh double-size"></div>
-                        <div class="reset-timer">Reset Timer</div>
+                    <button id="timer_reset" class="btn btn-default btn-lg" title="Reset Timer">
+                        <div class="glyphicon glyphicon-refresh"></div>
                     </button>
                 </div>
             </div>
@@ -55,15 +53,8 @@
     </div>
     <footer class="footer">
         <div class="container">
-            <div class="col-sm-6">
-                <p class="text-muted">Inspired by <a href="http://tomato-timer.com/">Tomato-Timer</a></p>
-            </div>
-            <div class="col-sm-6">
-                <a href="https://github.com/jombard/Pomodoro-Clock">
-                    <img src="images/GitHub-Mark-32px.png" alt="Github Logo">
-                    <p class="display-inline">Hosted on Github</p>
-                </a>
-            </div>
+            <a href="https://twitter.com/share" class="twitter-share-button"{count} data-text="Have you seen this sweet Pomodoro Timer?" data-size="large" data-hashtags="pomodorotechnique">Tweet</a>
+
         </div>
     </footer>
     <script src="js/jquery-2.1.4.min.js"></script>
