@@ -4,18 +4,21 @@ $(function() {
 			time_in_seconds: 1500,
 			autostart: true
 		});
+		resetPauseButton();
 	});
 	$(".js-short-break").click(function() {
 		$("#timer_default").createTimer({
 			time_in_seconds: 300,
 			autostart: true
 		});
+		resetPauseButton();
 	});
 	$(".js-long-break").click(function() {
 		$("#timer_default").createTimer({
 			time_in_seconds: 600,
 			autostart: true
 		});
+		resetPauseButton();
 	});
 	$("#timer_toggle").click(timerToggle);
 	$("#timer_reset").click(resetTimer);
@@ -32,19 +35,23 @@ function timerToggle() {
 	var timer = $("#timer_default");
 	var timerToggle = $("#timer_toggle");
 
-	timerToggle.toggleClass('active');
 	if (timer.data('countdown.state') == 'running') {
 		timer.pauseTimer();
 		timerToggle.find('.glyphicon').removeClass('glyphicon-pause').addClass('glyphicon-play');
 		changeDocumentTitle('pause');
+		timerToggle.addClass('active');
 	} else {
 		timer.startTimer();
-		timerToggle.find('.glyphicon').removeClass('glyphicon-play').addClass('glyphicon-pause');
+		resetPauseButton();
 	}
 }
 
 function resetTimer() {
 	$("#timer_default").resetTimer();
+	resetPauseButton();
+}
+
+function resetPauseButton() {
 	$("#timer_toggle").find('.glyphicon').removeClass('glyphicon-play').addClass('glyphicon-pause');
 	$("#timer_toggle").removeClass('active');
 }
