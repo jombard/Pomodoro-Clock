@@ -23,6 +23,11 @@ body {
 	text-shadow: 3px 3px 5px #222222;
 }
 
+.list-group-item-primary {
+    color: #ffffff;
+    background-color: #85C7FF;
+}
+
 .footer {
     position: absolute;
     bottom: 0;

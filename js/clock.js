@@ -5,6 +5,7 @@ $(function() {
 			autostart: true
 		});
 		resetPauseButton();
+		addTimerToLog('Pomodoro 25 mins', 'danger');
 	});
 	$(".js-short-break").click(function() {
 		$("#timer_default").createTimer({
@@ -12,6 +13,7 @@ $(function() {
 			autostart: true
 		});
 		resetPauseButton();
+		addTimerToLog('Short break 5 mins', 'info');
 	});
 	$(".js-long-break").click(function() {
 		$("#timer_default").createTimer({
@@ -19,6 +21,7 @@ $(function() {
 			autostart: true
 		});
 		resetPauseButton();
+		addTimerToLog('Long break 10 mins', 'primary');
 	});
 	$("#timer_toggle").click(timerToggle);
 	$("#timer_reset").click(resetTimer);
@@ -68,13 +71,6 @@ function changeDocumentTitle(status) {
 	}
 }
 
-! function(d, s, id) {
-	var js, fjs = d.getElementsByTagName(s)[0],
-		p = /^http:/.test(d.location) ? 'http' : 'https';
-	if (!d.getElementById(id)) {
-		js = d.createElement(s);
-		js.id = id;
-		js.src = p + '://platform.twitter.com/widgets.js';
-		fjs.parentNode.insertBefore(js, fjs);
-	}
-}(document, 'script', 'twitter-wjs');
+function addTimerToLog(history, type) {
+	$('.history-log').prepend('<p class="list-group-item list-group-item-' + type + '">' + history + '</p>');
+}
