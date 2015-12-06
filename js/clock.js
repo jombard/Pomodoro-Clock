@@ -33,13 +33,13 @@ function countdownAlert() {
 
 function timerToggle() {
 	var timer = $("#timer_default");
-	var timerToggle = $("#timer_toggle");
+	var btnTimerToggle = $("#timer_toggle");
 
 	if (timer.data('countdown.state') == 'running') {
 		timer.pauseTimer();
-		timerToggle.find('.glyphicon').removeClass('glyphicon-pause').addClass('glyphicon-play');
+		btnTimerToggle.find('.glyphicon').removeClass('glyphicon-pause').addClass('glyphicon-play');
 		changeDocumentTitle('pause');
-		timerToggle.addClass('active');
+		btnTimerToggle.addClass('active');
 	} else {
 		timer.startTimer();
 		resetPauseButton();
