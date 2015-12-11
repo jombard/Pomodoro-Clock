@@ -1,6 +1,6 @@
 $(function() {
 	$(".js-pomodoro").click(function() {
-		$("#timer_default").createTimer({
+		$("#timer_pomodoro").createTimer({
 			time_in_seconds: 1500,
 			autostart: true
 		});
@@ -8,7 +8,7 @@ $(function() {
 		addTimerToLog('Pomodoro 25 mins', 'danger');
 	});
 	$(".js-short-break").click(function() {
-		$("#timer_default").createTimer({
+		$("#timer_shortbreak").createTimer({
 			time_in_seconds: 300,
 			autostart: true
 		});
@@ -16,7 +16,7 @@ $(function() {
 		addTimerToLog('Short break 5 mins', 'info');
 	});
 	$(".js-long-break").click(function() {
-		$("#timer_default").createTimer({
+		$("#timer_longbreak").createTimer({
 			time_in_seconds: 600,
 			autostart: true
 		});

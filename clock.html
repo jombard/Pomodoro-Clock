@@ -22,18 +22,22 @@
         </div>
         <div class="row">
             <div class="col-sm-4">
-                <input type="button" class="btn btn-danger btn-block btn-lg js-pomodoro" value="Pomodoro">
+                <button type="button" class="circle circle-sm btn-info js-short-break">
+                    Short Break
+                    <div id="timer_shortbreak" class="timer">5:00</div>
+                </button>
             </div>
             <div class="col-sm-4">
-                <input type="button" class="btn btn-info btn-block btn-lg js-short-break" value="Short Break">
+                <button type="button" class="circle circle-lg btn-danger js-pomodoro">
+                    Pomodoro
+                    <div id="timer_pomodoro" class="timer">25:00</div>
+                </button>
             </div>
             <div class="col-sm-4">
-                <input type="button" class="btn btn-primary btn-block btn-lg js-long-break" value="Long Break">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-4 col-sm-offset-4">
-                <h1 id="timer_default" class="timer">00:00</h1>
+                <button type="button" class="circle circle-sm btn-primary js-long-break">
+                    Long Break
+                    <div id="timer_longbreak" class="timer">10:00</div>
+                </button>
             </div>
         </div>
         <div class="row">
